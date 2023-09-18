@@ -1,0 +1,27 @@
+<section class="section_father" >
+  <ng-container *ngIf="breeds.length>0; else loading">
+    <ul id="movieposters_ul" >
+      <li *ngFor="let breed of breeds">
+        <div class="movie_div_img">
+          <ng-container *ngIf="!!breed.reference_image_url; else elseTemplate">
+            <img class="img_cat" [src]="breed.reference_image_url" [alt]="breed.reference_image_id">
+          </ng-container>
+          <ng-template #elseTemplate>
+            <img class="img_cat"
+            src="https://static.vecteezy.com/system/resources/previews/020/541/465/non_2x/drawing-sad-gray-cat-the-site-is-not-available-website-loading-error-free-vector.jpg"
+            alt="undefined">
+          </ng-template>
+        </div>
+        <div class="movieinfo">
+          <h3>{{ breed.name }}</h3>
+        </div>
+        <!-- <a class="link_cat_detail" [routerLink]="['catsbreed/idbreed/',catBreed.id, catBreed.pos_in_array]"></a> -->
+        <a class="link_cat_detail" (click)="navigateToBreed(breed)"></a>
+      </li>
+    </ul>
+  </ng-container>
+  <ng-template #loading>
+    <app-loading></app-loading>
+  </ng-template>
+
+</section>

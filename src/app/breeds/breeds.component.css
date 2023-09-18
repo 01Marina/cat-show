@@ -1,0 +1,117 @@
+.section_father{
+  padding: 1%;
+}
+
+/* MOVIE POSTERS */
+#movieposters_ul{
+  list-style:none;
+  margin: 10% 5%;
+  padding: 0%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  width: calc((100%)/6.9);
+  height: 500px;
+  display:inline;
+	-webkit-perspective: 500;
+  -webkit-transition-duration: 0.5s;
+}
+li:hover {
+  width: 325px;
+  -webkit-perspective: 5000;
+  -webkit-transform: rotateY(0deg);
+}
+.movie_div_img{
+  width: 330px;
+  height: 75%;
+  overflow: hidden;
+  background-color: #deddcd;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.img_cat{
+  width: 100%;
+  position: absolute;
+}
+
+.movieinfo{
+  padding:5%;
+  width: 200px;
+  background-color:#deddcd;
+  border-radius: 5%;
+  margin:-40% auto auto 30%;
+  position:absolute;
+	box-shadow:0 20px 40px #888;
+	transform: translateZ(30px) rotateY(30deg);
+	transition-property: transform, box-shadow, margin;
+  transition-duration: 0.5s;
+}
+
+#movieposters_ul li:hover .movieinfo{
+  transform: rotateY(0deg);
+  box-shadow:0 5px 10px #888;
+  margin-top: -10% ;
+  margin-left: 20%;
+}
+
+.movieinfo h3 {
+  color:#7a3f3a;
+  font-variant: small-caps;
+  font-family:Georgia,serif,Times;
+  text-align:center;
+}
+
+
+#movieposters_ul li .movie_div_img{
+  transform: rotateY(30deg);
+	box-shadow:0 3px 10px #888;
+	transition-property: transform;
+  transition-duration: 0.5s;
+}
+
+
+.link_cat_detail{
+  position: absolute;
+  background: transparent;
+  width: auto;
+  height: 80%;
+  padding: 50%;
+  margin-top: -172%;
+  /* margin-top: -100%; */
+  border-radius: 5%;
+
+  transform: translateZ(30px) rotateY(30deg);
+	transition-property: transform;
+  transition-duration: 0.5s;
+}
+
+li:hover .link_cat_detail{
+  transform: rotateY(0deg);
+  margin: auto;
+  margin-top: -120%;
+}
+
+
+@media only screen and (max-width: 1024px){
+  li {
+    width: calc((100%)/4.9);
+  }
+
+}
+
+@media only screen and (max-width: 768px){
+  li {
+    width: calc((100%)/3.9);
+  }
+
+}
+@media only screen and (max-width: 425px){
+  li {
+    width: calc((100%)/1.9);
+  }
+
+}

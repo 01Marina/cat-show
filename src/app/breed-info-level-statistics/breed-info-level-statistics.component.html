@@ -1,0 +1,15 @@
+<div class="div_level">
+  <p>{{title}}</p>
+  <ng-container *ngFor="let item of [].constructor(level)">
+    <div class="div_img">
+      <img class="img_level_cat_dark" src="assets/cat_face_dark_grey.svg" alt="">
+    </div>
+  </ng-container>
+  <ng-container *ngIf="(5-level) > 0">
+    <ng-container *ngFor="let item of [].constructor(5-level)">
+      <div class="div_img">
+        <img class="img_level_cat_dark" src="assets/cat_face_light_grey.svg" alt="">
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

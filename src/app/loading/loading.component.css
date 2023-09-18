@@ -1,0 +1,15 @@
+.div_img_loading{
+  text-align: center;
+}
+.img_loading{
+  width: 10rem;
+  height: 10rem;
+  margin: 18% auto;
+  animation: spin 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% {transform: rotateZ(0deg);}
+  100% {transform: rotateZ(360deg);}
+}

@@ -1,0 +1,21 @@
+<section class="container body_home">
+  <div class="row">
+    <div class="col-12">
+      <h1>Cat Show</h1>
+      <div id="div_img_home" class="div_image_home">
+        <ng-container *ngIf="img$ |async as img">
+          <img class="img_cat_home" [src]="img.url" alt="">
+        </ng-container>
+      </div>
+      <p>Learn a little more about your cat and its breed.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="div1"></div>
+      <div class="div2"></div>
+      <div class="div3"></div>
+      <div class="div4"></div>
+    </div>
+  </div>
+</section>

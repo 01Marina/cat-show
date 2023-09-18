@@ -1,0 +1,70 @@
+.breed_name{
+  margin: 5% auto  2% auto;
+  text-align: center;
+}
+
+.statistics_container{
+  padding: 2%;
+}
+.description{
+  width: 100%;
+  border-radius: 10px;
+  padding: 2%;
+  background-color: #deddcd;
+  box-shadow: 0 5px 20px rgba(0,0,0,.1);
+  margin-bottom: 2%;
+}
+
+.div_info_general{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #deddcd;
+  box-shadow: 0 5px 20px rgba(0,0,0,.1);
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom: 2%;
+  padding: 0%;
+  padding-right: 2%;
+  width: 47%;
+}
+
+.div_info_general>p{
+  margin-bottom: 0;
+  min-width: 35%;
+  background-color: #c2c2c0;
+  padding: 5%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.div_info_general>p.p_info{
+  margin-bottom: 0;
+  min-width: 5%;
+  background-color: transparent;
+  padding: 0;
+  margin: auto;
+  border-radius: none;
+}
+
+
+@media only screen and (max-width: 450px){
+
+  div{
+    font-size: 10px;
+  }
+
+  h5{
+    font-size: 10px;
+    width: 93%;
+  }
+
+  .breed_name{
+    margin-top: 20%;
+  }
+
+  .div_info_general{
+    width: 93%;
+  }
+
+}

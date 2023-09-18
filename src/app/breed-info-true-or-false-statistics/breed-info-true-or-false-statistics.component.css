@@ -1,0 +1,30 @@
+
+.div_true_false{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #deddcd;
+  box-shadow: 0 5px 20px rgba(0,0,0,.1);
+  border-radius: 10px;
+  margin-bottom: 4%;
+  padding-right: 2%;
+}
+
+.div_true_false>p{
+  margin-bottom: 0;
+  background-color: #c2c2c0;
+  border-radius: 10px 0px 0px 10px;
+  min-width: 60%;
+  padding: 10%;
+}
+
+.div_img{
+  width: 20%;
+  margin: auto;
+}
+
+.div_img>img{
+  width: auto;
+  margin: auto;
+}

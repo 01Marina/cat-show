@@ -1,0 +1,66 @@
+
+<div class="statistics_container">
+  <ng-container *ngIf="breed">
+    <h1 class="breed_name">{{breed.name}}</h1>
+    <app-carousel-gallery [breed_id]="breed.id"></app-carousel-gallery>
+    <div class="row">
+      <div class="col-lg-6 ">
+        <div class="row">
+          <h5 class="col-12 description">{{breed.description}}</h5>
+            <div class="col-12 col-lg-6 div_info_general">
+              <p>Otrers Names</p>
+              <ng-container *ngIf="breed.alt_names != ''; else noneAltNames">
+                <p class="p_info">{{breed.alt_names}}</p>
+              </ng-container>
+              <ng-template #noneAltNames>
+                <p class="p_info">- - -</p>
+              </ng-template>
+            </div>
+
+            <div class="col-12 col-lg-6 div_info_general">
+              <p>Weight</p>
+              <p class="p_info">{{breed.weight.metric}}</p>
+            </div>
+
+            <div class="col-12 col-lg-6 div_info_general">
+              <p>Origin</p>
+              <p class="p_info">{{breed.origin}}</p>
+            </div>
+
+            <div class="col-12 col-lg-6 div_info_general">
+              <p>Life Expectancy</p>
+              <p class="p_info">{{breed.life_span}}</p>
+            </div>
+
+            <div class="col-6">
+              <app-breed-info-true-or-false-statistics [title]="'Adaptation'" [value]="breed.indoor"></app-breed-info-true-or-false-statistics>
+              <app-breed-info-true-or-false-statistics [title]="'Lapcat'" [value]="breed.lap"></app-breed-info-true-or-false-statistics>
+              <app-breed-info-true-or-false-statistics [title]="'Experimental'" [value]="breed.experimental"></app-breed-info-true-or-false-statistics>
+              <app-breed-info-true-or-false-statistics [title]="'Hairless'" [value]="breed.hairless"></app-breed-info-true-or-false-statistics>
+            </div>
+            <div class="col-6">
+              <app-breed-info-true-or-false-statistics [title]="'Natural'" [value]="breed.natural"></app-breed-info-true-or-false-statistics>
+              <app-breed-info-true-or-false-statistics [title]="'Exotic'" [value]="breed.rare"></app-breed-info-true-or-false-statistics>
+              <app-breed-info-true-or-false-statistics [title]="'Short Legs'" [value]="breed.short_legs"></app-breed-info-true-or-false-statistics>
+              <app-breed-info-true-or-false-statistics [title]="'Hypoallergenic'" [value]="breed.hypoallergenic"></app-breed-info-true-or-false-statistics>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 ">
+        <app-breed-info-level-statistics [title]="'Intelligence'" [level]="breed.intelligence"></app-breed-info-level-statistics>
+        <app-breed-info-level-statistics [title]="'Adaptability'" [level]="breed.adaptability"></app-breed-info-level-statistics>
+        <app-breed-info-level-statistics [title]="'Affection level'" [level]="breed.affection_level"></app-breed-info-level-statistics>
+        <app-breed-info-level-statistics [title]="'Child Friendly'" [level]="breed.child_friendly"></app-breed-info-level-statistics>
+        <app-breed-info-level-statistics [title]="'Dog Friendly'" [level]="breed.dog_friendly"></app-breed-info-level-statistics>
+        <app-breed-info-level-statistics [title]="'Stranger Friendly'" [level]="breed.stranger_friendly"></app-breed-info-level-statistics>
+        <app-breed-info-level-statistics [title]="'Energy'" [level]="breed.energy_level"></app-breed-info-level-statistics>
+        <app-breed-info-level-statistics [title]="'Grooming'" [level]="breed.grooming"></app-breed-info-level-statistics>
+        <app-breed-info-level-statistics [title]="'Health Issues'" [level]="breed.health_issues"></app-breed-info-level-statistics>
+        <app-breed-info-level-statistics [title]="'Shedding Cat'" [level]="breed.shedding_level"></app-breed-info-level-statistics>
+        <app-breed-info-level-statistics [title]="'Social Needs'" [level]="breed.social_needs"></app-breed-info-level-statistics>
+        <app-breed-info-level-statistics [title]="'Vocalisation'" [level]="breed.vocalisation"></app-breed-info-level-statistics>
+      </div>
+    </div>
+  </ng-container>
+</div>

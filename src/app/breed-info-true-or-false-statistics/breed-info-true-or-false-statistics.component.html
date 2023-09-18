@@ -1,0 +1,11 @@
+<div class="div_true_false">
+  <p>{{title}}</p>
+  <div class="div_img">
+    <ng-container *ngIf="value == 0; else IsTrueLegs">
+      <img class="img_level_cat_dark" src="assets/cat_face_red.svg" alt="">
+    </ng-container>
+    <ng-template #IsTrueLegs>
+      <img class="img_level_cat_dark" src="assets/cat_face_green.svg" alt="">
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="div_carousel">
+  <figure class="figure_cards">
+
+    <div id="cards_content" class="cards_content">
+      <ng-container *ngIf="cat1$ | async as cat1">
+        <div id="card_1" class="card_1">
+          <ng-container *ngIf="cat1.url; else loading">
+            <img class="img_cat" [src]="cat1.url" [alt]="cat1.id">
+          </ng-container>
+          <div id="div_btns_1" class="div_btn_carousel">
+            <button id="btn_1_left" class="btn_carousel" (click)="animation('left', 3, 1, 2)"><img src="assets/cat_left_arrow.svg" alt=""></button>
+            <button id="btn_1_right" class="btn_carousel" (click)="animation('right', 2, 3, 1)"><img src="assets/cat_right_arrow.svg" alt=""></button>
+          </div>
+        </div>
+      </ng-container>
+
+     <ng-container *ngIf="cat2$ | async as cat2">
+        <div id="card_2" class="card_2">
+          <ng-container *ngIf="cat2.url; else loading">
+            <img class="img_cat" [src]="cat2.url" [alt]="cat2.id">
+          </ng-container>
+          <div id="div_btns_2" class="div_btn_carousel">
+            <button id="btn_2_left" class="btn_carousel" (click)="animation('left', 1, 2, 3)"><img src="assets/cat_left_arrow.svg" alt=""></button>
+            <button id="btn_2_right" class="btn_carousel" (click)="animation('right', 3, 1, 2)"><img src="assets/cat_right_arrow.svg" alt=""></button>
+          </div>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="cat3$ | async as cat3">
+        <div id="card_3" class="card_3">
+          <ng-container *ngIf="cat3.url; else loading">
+            <img class="img_cat" [src]="cat3.url" [alt]="cat3.id">
+          </ng-container>
+          <div id="div_btns_3" class="div_btn_carousel">
+            <button id="btn_3_left"  class="btn_carousel" (click)="animation('left', 2, 3, 1)"><img src="assets/cat_left_arrow.svg" alt=""></button>
+            <button id="btn_3_right" class="btn_carousel" (click)="animation('right', 1, 2, 3)"><img src="assets/cat_right_arrow.svg" alt=""></button>
+          </div>
+        </div>
+      </ng-container>
+      <ng-template #loading>
+        <app-loading></app-loading>
+      </ng-template>
+    </div>
+  </figure>
+</div>
